@@ -1,0 +1,8 @@
+ipython
+ipywidgets
+matplotlib
+nltk
+notebook
+pyjarowinkler
+regex
+stanza
