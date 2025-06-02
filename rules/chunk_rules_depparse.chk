@@ -1,0 +1,23 @@
+# SYNTAX:
+# chunk rule: {regexp}
+# strip rule: }regexp{
+# split rule: regexp}{regexp
+# merge rule: regexp{}regexp
+
+# BACKREFERENCES:
+# when using backrefereces to captured group numbers, the index has to be incremented
+# by a number determined by the number of tags in the expression and the position of the
+# referenced group within it. e.g. the rule:
+#
+# '<NOUN.*Gender=(Neut).*><ADJ.*Gender=\4.*>'   NOTE the escaped backreference!
+#
+# translates to the following regular expression:
+#
+# (<(NOUN[^\{\}<>]*Gender=(Neut)[^\{\}<>]*)>)(<(ADJ[^\{\}<>]*Gender=\4[^\{\}<>]*)>)
+#
+# the index of the capture group is augmented by 3, i.e. from 1 to 4, because
+# it's nested inside the general rule (1), which contain two tags that define a group each (1+1+1)
+# and it's the first capture group within the first tag, so 1 + (1+1+1) = 4
+
+OP:
+<ADV.*> {<NUM.*Head=3\|DepRel=nummod.*> <NOUN.*Head=0\|DepRel=root> <ADJ.*Head=3\|DepRel=amod>?} 

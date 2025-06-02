@@ -1,0 +1,491 @@
+# SYNTAX:
+# chunk rule: {regexp}
+# strip rule: }regexp{
+# split rule: regexp}{regexp
+# merge rule: regexp{}regexp
+
+# BACKREFERENCES:
+# when using backrefereces to captured group numbers, the index has to be incremented
+# by a number determined by the number of tags in the expression and the position of the
+# referenced group within it. e.g. the rule:
+#
+# '<NOUN.*Gender=(Neut).*><ADJ.*Gender=\4.*>'   NOTE the escaped backreference!
+#
+# translates to the following regular expression:
+#
+# (<(NOUN[^\{\}<>]*Gender=(Neut)[^\{\}<>]*)>)(<(ADJ[^\{\}<>]*Gender=\4[^\{\}<>]*)>)
+#
+# the index of the capture group is augmented by 3, i.e. from 1 to 4, because
+# it's nested inside the general rule (1), which contain two tags that define a group each (1+1+1)
+# and it's the first capture group within the first tag, so 1 + (1+1+1) = 4
+
+pCont:
+{<.*Lemma=(et|atque)>? <.*Lemma=in> <.*Lemma=(alius|alias)>? <.*Lemma=qui>? <NUM.*>? <.*Lemma=(meianus)> <.*Lemma=sum>?}
+
+######################################
+# quantities and units of measurement
+######################################
+
+UNIT:
+{<.*Function=Unit.*> <VERB.*VerbForm=Part(?!.*Object=1).*> <VERB.*VerbForm=Part(?!.*Object=1).*> <NUM.*|.*Lemma=(aliqui|aliquis)>}
+{<NUM.*|.*Lemma=(aliqui|aliquis)> <.*Function=Unit.*> <VERB.*VerbForm=Part(?!.*Object=1).*> <VERB.*VerbForm=Part(?!.*Object=1).*>}
+{<.*Function=Unit.*> <NUM.*|.*Lemma=(aliqui|aliquis)> <NOUN-Case=(Nom|Gen)(?!.*Object=1).*>?}
+{<.*Function=Unit.*> <NOUN-Case=(Nom|Gen)(?!.*Object=1).*>? <NUM.*|.*Lemma=(aliqui|aliquis)>}
+{<NUM.*|.*Lemma=(aliqui|aliquis)> <.*Function=Unit.*>+ <NOUN-Case=(Nom|Gen)(?!.*Object=1).*>?}
+}<NUM.*|.*Lemma=(aliqui|aliquis)>{
+
+# quantities as related to units
+QT:
+# {<NUM.*|.*Lemma=(quidam|aliqui).*>+ <UNIT>}
+# {<UNIT> <NUM.*|.*Lemma=(quidam|aliqui).*>+}
+{(<NUM.*> <.*Lemma=et>)? <NUM.*|.*Lemma=(aliqui|aliquis)>+ <UNIT>}
+{<UNIT> (<NUM.*> <.*Lemma=et>)? <NUM.*|.*Lemma=(aliqui|aliquis)>+}
+}<UNIT>{
+{<UNIT> <.*Lemma=(cum|et|atque)> <.*Lemma=(dimidium|medius)>}
+}<UNIT>{
+
+# quantities in general
+QT-Gen:
+<.*Object=1.*> {<NUM.*Case=Gen.*>} <.*Case=Gen.*Object=1.*>
+{<NUM.*Case=Gen.*>}
+
+QT:
+{<NUM.*Gender=(Neut|Fem|Masc).*Number=(Sing|Plur).*> <NUM.*Gender=\4\|Number=\5.*>* <NOUN.*Gender=\4\|Number=\5.*>}
+{<NOUN.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <NUM.*Gender=\4.*Number=\5.*>+}
+{<NUM.*Form=Digit.* | NUM-Feats=0>+ <NOUN.*>}
+{<NOUN.*> <NUM.*Form=Digit.* | NUM-Feats=0>+}
+{<.*Lemma=(item|et|atque|cum)> (<NUM.*> <.*Lemma=et>)? <NUM(?!.*Object=1).*|.*Lemma=(aliqui|aliquis)>+}
+{<.*Lemma=(item|et|atque|cum)> <.*Object=1.*> (<NUM.*> <.*Lemma=et>)? <NUM(?!.*Object=1).*>}
+}<NOUN.*|.*Object=1.*>{
+}<.*Lemma=(item|et|atque|de|cum)>{
+{<NUM.*|.*Lemma=(aliqui|aliquis)>}
+
+########
+# names
+########
+
+NAME:
+<(?!.*Lemma=de).*> {<.*Lemma=(sanctus|sanus)> <.*Capital=1.*>+}
+<.*Lemma=in> {<.*Capital=1(?!.*Function=Location).*>+}
+<.*Function=Location.*> {<.*Lemma=(sanctus|sanus)>? <.*Capital=1.*>+}
+{<.*Capital=1(?!.*(Function|Lemma)).*> <.*Lemma=de>? <.*Lemma=(sanctus|sanus)>? <.*Capital=1.*>}
+<.*Lemma=(domina|dominus|idem|condam)> {<.*Capital=1(?!.*(Function|Lemma)).*>+}
+<.*Lemma=(dico|dictus|supradico|subdo)> {<.*Capital=1(?!.*Function=Location).*>+}
+# {<(?!.*(Object)).*Capital=1(?!.*(Lemma)).*>}
+
+###########################################
+# Prepositions, adpositions, and particles
+###########################################
+
+pStat:
+{<.*Lemma=(ponere|habeo)>? <.*Lemma=in> <.*Lemma=(pignus)>}
+{<.*Lemma=qui> <(VERB|NOUN|ADJ).*> <.*Lemma=omnis> <.*Lemma=annus>}
+{<.*Lemma=qui> <.*Lemma=habeo>}
+{<.*Lemma=qui> <.*Lemma=servire> <QT|UNIT>* <(VERB|NOUN|ADJ).*>} <ADP.*>
+{<.*Lemma=habeo> <.*Lemma=in> <.*Lemma=dos>}
+{<.*Lemma=(mutuare|mutuum)> <ADP.*>?}
+{<.*Lemma=(impignorare|causa)>}
+{<.*Lemma=per> <.*Lemma=manus>}
+
+pComp:
+{<.*Lemma=idem>? <DET.*>? <.*Lemma=modus> <PRON.*>* <ADV.*>*}
+
+pQual:
+{<ADV.*>? <.*Lemma=(vocare|appello)>}
+{<.*Lemma=(scilicet|videlicet)>}
+{<.*Lemma=qui> <ADP.*>? <.*Lemma=(moneta|currere|valeo|ascendere)|CCONJ.*|ADV.*>+ (<.*Lemma=in> <NAME.*>)? <.*Lemma=(moneta|currere|valeo|ascendere)|CCONJ.*|ADV.*>*}
+
+pDeco:
+{<.*Lemma=(garnire|frezatus|munire|munio)> <.*Lemma=(seu|sive|et|atque)>? <.*Lemma=(garnire|frezatus|munire|munio)>? <.*Lemma=sum>? <.*Lemma=cum>?}
+{<.*Lemma=sum>} <.*Object=1.*>
+{<.*Lemma=qui> <.*Lemma=sum>} <ADP.*>? <.*Object=1.*>
+{<.*Lemma=(folrare)> <.*Lemma=sum>? <.*Lemma=de>?}
+{<.*Lemma=(depingere|describere)> <.*Lemma=(cum|sum)>?}
+{<.*Lemma=cum> <.*Lemma=(folratura)> <.*Lemma=de>?}
+
+pRef:
+{<.*Lemma=qui> <.*Lemma=sum>?}
+{<.*Lemma=(dico|dictus|supradico|idem|praedictus|subdo)>}
+
+pLoc:
+{<.*Lemma=(situs|scio)>? <.*Lemma=(in|an|iuxta)>}
+{<.*Lemma=sistere> <ADP.*>}
+{<.*Lemma=clausa>}
+{<.*Lemma=(situm|scio)>}
+{<.*Lemma=confrontare> <.*Lemma=cum>}
+{<.*Lemma=apud>}
+
+pAbl:
+{<.*Lemma=de>}
+{<.*Lemma=pro>}
+
+pAdd:
+{<.*Lemma=cum>}
+
+pSub:
+{<.*Lemma=sine>}
+
+pAlt:
+{<.*Lemma=sive>}
+
+pCoor:
+{<.*Lemma=(et|atque)>}
+
+pList:
+{<.*Lemma=(item|primus|primo)>}
+
+pRnd:
+{<CCONJ.*>? <.*Lemma=circa>}
+
+pPurp:
+{<.*Lemma=ad>}
+
+#######################
+# agents and locations
+#######################
+
+AGT:
+{<pRef> <.*Lemma=condam|PRON.*>? <NAME.*> <.*Lemma=condam|PRON.*>?}
+{<pRef>? <.*Lemma=condam>? <.*Lemma=(domina|dominus)> <.*Lemma=condam|PRON.*>? <NAME.*> <.*Lemma=condam|PRON.*>?}
+{<pRef> <.*Lemma=isque>? <.*Lemma=(uxor|domus)>}
+{<.*Lemma=(avi|maternus|frater)|PRON.*> <.*Lemma=(avi|maternus|frater)|PRON.*>+}
+{<pRef> <.*Lemma=(dominus|domina)>}
+{<pRef> <NOUN-Case=(Abl|Dat)(?!.*(Object|Function|Lemma)).*> <PRON.*>?}
+
+LOC-rm:
+<pLoc> {<.*Lemma=camera> <.*Function=Location\|Type=room.*>}
+<pLoc>? {<.*Function=Location\|Type=room.*>}
+
+LOC-lm:
+{<pRef>? <.*Function=Location\|Type=lm.*> <pDet>? <NAME.*|AGT>?}
+{<.*Function=Location\|Type=lm.*>}
+
+LOC-rs:
+{<pLoc> <.*Function=Location\|Type=imm.*> <pLoc>}
+{<pRef>? <.*Function=Location\|Type=imm.*> <pDet|NAME.*|AGT|LOC-lm>+}
+
+LOC-rs:
+{<pRef>? <.*Function=Location\|Type=imm.*> <pCoor> <.*> (<pLoc> <NAME.*|LOC.*>)+}
+{<pRef>? <.*Function=Location\|Type=imm.*> (<pCoor>? <pLoc> <LOC.*>)+ (<pQual> <NAME.*>)?}
+{<pRef>? <.*Function=Location\|Type=imm.*> (<pQual|pLoc> <NAME.*>)?}
+
+AGT:
+{<.*Lemma=(dominus|domina)> <LOC.*>}
+{<PRON.*> <NAME>}
+{<NAME> <PRON.*>}
+
+###########
+# context
+##########
+pCtx:
+<p.*|LOC.*> {<.*Lemma=(sum|invenio|hic|bonum|sequor|prout|infra|ecce|peto|reperire|jocalis|parafernalia|mobilis|habeo|tenere)>+ <SCONJ.*|ADP.*>*} <p.*|LOC.*|NAME>
+<p.*|LOC.*> {<.*Lemma=(sum|invenio|hic|bonum|sequor|prout|infra|ecce|peto|reperire|jocalis|parafernalia|mobilis|habeo|tenere)>+ <SCONJ.*|ADP.*>*} (?!<.*>)
+{<.*Lemma=sequor> <.*Lemma=(sum|invenio|hic|bonum|sequor|prout|infra|ecce|peto|reperire|jocalis|parafernalia|mobilis|habeo|tenere)>+ <SCONJ.*|ADP.*>*} <p.*|LOC.*|NAME>
+{<.*Lemma=sequor> <.*Lemma=(sum|invenio|hic|bonum|sequor|prout|infra|ecce|peto|reperire|jocalis|parafernalia|mobilis|habeo|tenere)>+ <SCONJ.*|ADP.*>*} (?!<.*>)
+{<.*Lemma=(alius|alias|lo|quidam|ultra)>+}
+<p(Add|Coor)> {<.*Lemma=(frodium|omnis|bonum|mobilis)>+}
+{<.*Lemma=(dicere)>+}
+
+#########################
+# attributes and objects
+#########################
+
+ATT-Mag:
+{<pRnd>? <QT.*> <UNIT> <ADP.*> <QT.*> <UNIT> <pRnd>?}
+{<pRnd>? <UNIT|QT.*> <UNIT|QT.*>+ <pRnd>?}
+
+ATT-Gend:
+{<.*Case=(Gen|Abl).*Lemma=(mulier|homo|muliebris)>}
+{<.*Lemma=(mulier|homo|muliebris)>} <.*Object=1.*>
+<.*Object=1.*> {<.*Lemma=(mulier|homo|muliebris)>}
+
+ATT-Adj:
+{<.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <ATT-Gend> <.*Gender=\4\|Number=\5.*Object=1.*>}
+{<.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*Object=1.*> <ATT-Gend> <.*Gender=\4\|Number=\5.*>}
+}<.*Object=1.*>{
+}<ATT-Gend>{
+
+OBJ:
+{<.*Object=1.*>} <ATT-Gend> <ATT-Adj>
+<ATT-Adj> <ATT-Gend> {<.*Object=1.*>}
+
+ATT:
+{<OBJ.*> <ATT-Gend> <ATT-Adj>}
+{<ATT-Adj> <ATT-Gend> <OBJ.*>}
+
+ATT-Adj:
+{<(ADJ|NOUN)-Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*Object=1.*> <(NOUN|ADJ)-Case=\5.*Gender=\6\|Number=\7(?!.*Object=1).*> <(NOUN|ADJ).*Gender=\6\|Number=\7(?!.*Object=1).*>?}
+}<.*Object=1.*>{
+ATT-Adj:
+{<NOUN-Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <ATT.*>* <ADJ-Case=\4.*Gender=\5\|Number=\6.*>}
+}<NOUN.*>{
+}<ATT.*>{
+ATT-Adj:
+{<ADJ-Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <ATT.*>* <NOUN-Case=\4.*Gender=\5\|Number=\6.*>}
+}<NOUN.*>{
+}<ATT.*>{
+ATT-Adj:
+{<.*Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*Object=1.*> <ATT.*>* <NOUN-Case=\4.*Gender=\5\|Number=\6.*(?!.*Object=1).*>}
+{<NOUN-Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur)(?!.*Object=1).*> <ATT.*>* <NOUN-Case=\4.*Gender=\5\|Number=\6.*Object=1.*>}
+}<.*Object=1.*>{
+}<ATT.*>{
+ATT-Adj:
+{<NOUN.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <QT> <(NOUN|ADJ).*Gender=\4\|Number=\5(?!.*Object=1).*>}
+}<.*Object=1.*>{
+}<QT>{
+ATT-Adj:
+<pAbl> <NOUN-Case=Abl.*> {<VERB.*>} <p.*|ATT.*>
+<p.*> <QT.*> <.*Object=1.*> {<VERB(?!.*VerbForm=(Ger|Gdv)).*>} <p.*>
+<QT.*> <.*Object=1.*Capital=1.*> {<.*Object=1.*>} <p.*|ATT-Mag> # single case exception "tabule pyni" dev:97
+
+ATT-Adj:
+<p.*> <NOUN.*Object=1.*|LOC.*> {<ADJ(?!.*Object=1).*>} <p.*|AGT>
+
+ATT-Pos:
+{<.*Case=(Nom|Abl|Acc).*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*Object=1.*> <ATT.*>* <(PRON|DET)-Case=\4.*Gender=\5\|Number=\6.*(?!.*Object=1).*>}
+}<.*Object=1.*>{
+}<ATT.*>{
+{<CCONJ.*>? <.*Lemma=sum> <AGT>}
+
+ATT-Deco:
+{<.*Lemma=armigeratus> <NOUN.*> <PRON.*>?}
+
+ATT-Part:
+{<NOUN-Case=(Nom|Abl)\|Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <ATT.*>* <VERB.*Gender=\5\|Number=\6.*VerbForm=Part(?!.*Lemma=).*>}
+}<NOUN.*>{
+}<ATT.*>{
+{<VERB.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*VerbForm=Part(?!.*Lemma=).*> <ATT.*>* <NOUN-Case=(Nom|Abl)\|Gender=\4\|Number=\5.*>}
+}<NOUN.*>{
+}<ATT.*>{
+<.*Object=1.*> <ATT.*>? {<VERB.*VerbForm=Part(?!.*Lemma=).*>}
+
+OBJ:
+<QT-Gen> {<.*Case=Gen.*Object=1.*>}
+
+ATT-Gen:
+{<QT-Gen> <OBJ.*>}
+{<QT-Gen> <.*Case=(Gen|Acc).*>} <p.*|ATT.*>
+{<NOUN-Case=(Nom|Abl)\|Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*Object=1.*> <(NOUN|ADJ|NUM)-Case=Gen.*> <NOUN-Case=Acc.*Gender=\5\|Number=\6.*>}
+}<NOUN-Case=(Nom|Abl).*>{
+{<VERB.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*VerbForm=Part.*> <NOUN-Case=Gen.*Gender=\4\|Number=\5.*>}
+}<VERB.*>{
+{<NOUN-Case=(Nom|Abl)\|Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur)> <NOUN-Case=Gen.*Gender=\5\|Number=\6.*>+}
+}<NOUN-Case=(Nom|Abl).*>{
+
+ATT-Gen:
+<NOUN-Case=(Nom|Abl|Acc).*Object=1.*> {<(NOUN|PRON|PNOUN|ADJ)-Case=Gen.*>+}
+{<NOUN-Case=Gen.*>+} <NOUN-Case=(Nom|Abl|Acc).*Object=1.*>
+<NOUN-Case=Nom.*Object=1.*> {<(NOUN|NUM)-Case=Gen.*> <NOUN-Case=Acc.*>}
+
+OBJ:
+<pAbl> <ATT-(Adj|Gen|Part)>? {<.*Object=1.*>} <ATT-(Adj|Gen|Part)>? <p.*|ATT-(Ref|Gend|Dec.*)>
+<pAbl> <ATT-(Adj|Gen|Part)>? {<.*Object=1.*>} <ATT-(Adj|Gen|Part)>? <p.*|ATT-(Ref|Gend|Dec.*)>
+<pAbl> <ATT-(Adj|Gen|Part)>? {<.*Object=1.*>} <ATT-(Adj|Gen|Part)>? (?!<.*>)
+<pAbl> <ATT-(Adj|Gen|Part)>? {<.*Object=1.*>} <ATT-(Adj|Gen|Part)>? (?!<.*>)
+<pPurp>? <VERB.*VerbForm=(Ger|Gdv)(?!.*Object=1).*> {<.*Object=1.*>}
+<p(Add|Sub)> {<.*Object=1.*>} <.*>? <p.*>
+<p(Add|Sub)> {<.*Object=1.*>} <ATT.*>? (?!<.*>)
+<p(Add|Sub)> {<.*Object=1.*>} <QT.*> <.*Object=1.*> <p.*>
+
+OBJ-c:
+{<NOUN-Case=(Nom|Abl).*Gender=(Neut|Fem|Masc).*Object=1.*> <NOUN-Case=(Nom|Dat|Abl).*Gender=\5.*Object=1.*>}
+<QT.*> {<(NOUN|VERB).*Object=1.*> <VERB.*Object=1.*>} (?!<.*>)
+<p(Add|Sub)> <QT.*> {<.*Object=1.*> <.*Object=1.*>} (?!<.*>)
+
+OBJ-x:
+<pAbl> {<NOUN.*>} <ATT-(Adj|Gen|Part)>? <p.*|ATT-(Ref|Gend|Stat.*)>
+<pAbl> <OBJ.*> <pAlt> {<.*>}
+
+OBJ:
+<p(Add|Sub)> <OBJ.*> <QT.*> {<.*Object=1.*>} <p.*>
+<p(Add|Sub)> <QT.*> {<.*Object=1.*>} (?!<.*>)
+
+OBJ-Alt:
+{<QT.*>? <pCtx>? <OBJ.*> <pAlt> <QT.*>? <OBJ.*>}
+
+ATT-Ger:
+{<pPurp>? <VERB.*VerbForm=(Ger|Gdv)(?!.*Object=1).*> <.*Object=1.*|OBJ.*>?}
+
+ATT-Adj:
+{<.*Object=1.*> <NOUN(?!.*Object=1).*>}
+<QT.*> {<ADJ.*>} <.*Object=1.*|VERB.*> (?!<.*>)
+}<.*Object=1.*>{
+}<VERB.*>{
+<p.*> <(NOUN|ADJ|VERB).*> {<VERB(?!.*Object=1).*>} <p.*>
+<p.*> <(NOUN|ADJ|VERB).*> {<VERB(?!.*Object=1).*>} (?!<.*>)
+
+ATT-Cont:
+<.*Object=1.*> {<.*Case=Dat.*Object=1.*>}
+
+OBJ:
+<p.*> <QT.*>? {<.*Object=1.*> <pQual>? <.*Object=1.*>} <ATT.*|p.*|LOC.*|AGT.*>
+<p.*>? <QT.*> <pCtx>? <ATT.*>* {<.*Object=1.*>} <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*>? <QT.*> <pCtx>? <ATT.*>* {<.*Object=1.*>} <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? {<.*Object=1.*>} <QT.*>
+
+OBJ-x:
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<(NOUN|ADJ|VERB|PRON)(?!.*Object=1).*>} <pAbl|pAdd|pSub>? <OBJ.*>? <ATT.*>* (?!<.*>)
+<pAbl> {<VERB.*VerbForm=Part.*>} <pAbl>
+<p(Add|Loc|Coor|Abl)> {<(NOUN|ADJ|VERB)(?!.*Object=1).*>} <ATT-Adj> <p(Add|Loc|Coor|Abl)>
+<(?!OBJ).*> <QT> {<NOUN.*>} <ATT.*>? <QT|p.*>
+
+OBJ-Alt:
+{<QT.*>? <pCtx>? <OBJ.*> <pAlt> <QT.*>? <OBJ.*>}
+
+ATT-Abl:
+{<pAbl> <QT>? <OBJ.*> <ATT(?!.*Deco).*>*} (?!<.*>)
+{<pAbl> <QT>? <OBJ.*> <ATT(?!.*Deco).*>*} <p.*|AGT>
+{<pAbl> <ATT-(Mag)>}
+<pDeco> {<(NOUN|ADJ)-Case=Abl.*>}
+
+ATT-Abl:
+<(?!pCoor).*> {<pAbl> <.*Case=Abl.*>+} <p.*|AGT>
+<(?!pCoor).*> {<pAbl> <QT.*>? <ATT.*>? <OBJ.*> <ATT(?!.*Deco).*>?} <p.*|AGT>
+<(?!pCoor).*> {<pAbl> <QT.*>? <ATT.*>? <OBJ.*> <ATT(?!.*Deco).*>?} (?!<.*>)
+
+ATT-Ref:
+{<pLoc>? <pRef> <OBJ.*>}
+
+ATT-Deco:
+{<ATT-Ref>? <pDeco> <OBJ.*>? <ATT.*>? (<pCoor> <OBJ.*> <ATT.*>? ((<pComp> <OBJ.*> <pRef>)|(<pRef> <OBJ.*> <pComp>))?)+ <pComp>?}
+{<pDeco> <pComp> <pCtx?> <ATT.*>}
+{<pDeco> <pComp> <pCtx?> <OBJ.*> <pRef>}
+{<ATT-Ref> <pDeco> <ATT.*>+ (<pCoor> <ATT.*>)+}
+{<pAdd> <.*>+ <pDeco>} (?!<.*>)
+
+ATT-Add:
+<(?!pCoor).*> {<pAdd> <OBJ.*|QT>+ (<pCoor> <OBJ.*|ATT.*>+) (<pCoor> <OBJ.*|ATT.*>+)+} (?!<.*>)
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <ATT-(Adj|Gen|Abl|Pos|Part)>? (<pCoor> <OBJ.*|ATT.*>+) (<pCoor> <OBJ.*|ATT.*>+)+} (?!<.*>)
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <ATT-(Adj|Gen|Abl|Pos|Part)>? (<pCoor> <OBJ.*|ATT.*>+) (<pCoor> <OBJ.*|ATT.*>+)+} <p(?!Coor).*>
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <ATT-(Adj|Gen|Abl|Pos|Part)>?} (?!<.*>)
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <ATT-(Adj|Gen|Abl|Pos|Part)>?} <p.*>
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <LOC-rs>} (?!<.*>)
+<(?!pCoor).*> {<pAdd> <QT>? <OBJ.*> <LOC-rs>} <p.*>
+
+ATT-Sub:
+{<pSub> <ATT.*|DET.*>* <OBJ.*> <ATT.*|DET.*>*} <p.*>
+{<pSub> <.*Case=Abl.*>* <.*Case=Gen.*|.*Case=Abl.*|ATT.*|CCONJ.*>*} <p.*>
+{<pSub> <OBJ.*> <QT.*> <OBJ.*>} <p.*>
+{<pSub> <ATT.*|DET.*|QT.*>* <OBJ.*> <ATT.*|DET.*>*} (?!<.*>)
+{<pSub> <.*Case=Abl.*>* <.*Case=Gen.*|.*Case=Abl.*|ATT.*|CCONJ.*>*} (?!<.*>)
+
+ATT:
+{<pLoc> <OBJ.*> <ATT.*>? <AGT>? (<pCoor> <ATT-Abl>)?}
+
+ATT-Adj:
+<p.*|QT|ATT.*> <.*Object=1.*> <ATT.*>* {<(ADJ|NOUN).*>} <ATT.*>* (?!<.*>)
+<OBJ.*> <QT> {<(NOUN|ADJ).*>} <ATT.*>
+<QT> {<(NOUN|ADJ).*>} <OBJ.*|.*Object=1.*>
+
+OBJ:
+<p.*> <QT.*>? {<.*Object=1.*> <pQual>? <.*Object=1.*>} <ATT.*|p.*|LOC.*|AGT.*>
+<p.*>? <QT.*> <pCtx>? <ATT.*>* {<.*Object=1.*>} <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* <p.*|LOC.*|AGT.*>
+<p.*>? <QT.*> <pCtx>? <ATT.*>* {<.*Object=1.*>} <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? <QT.*>? <pCtx>? <ATT.*>* {<.*Object=1.*>} <QT.*>? <ATT.*>* (?!<.*>)
+<p.*> <pCtx>? {<.*Object=1.*>} <QT.*>
+
+OBJ-c:
+{<.*Object=1.*> <.*Object=1.*>}
+<p.*|QT> {<VERB.*VerbForm=Part.*> <.*Object=1.*>} <p.*|QT|ATT.*>
+<ATT-Mag> {<(NOUN|DET).*>+} <ADJ.*> (?!<.*>) # single case patre nostre
+
+OBJ:
+{<.*Object=1.*>}
+
+OBJ-Alt:
+{<QT.*>? <pCtx>? <OBJ.*> <pAlt> <QT.*>? <OBJ.*>}
+
+#########################
+# adjustments
+########################
+
+ATT-Adj:
+{<ADJ(?!.*Capital=1).*>}
+
+NAME:
+{<(?!.*(Object)).*Capital=1(?!.*(Lemma)).*>}
+
+ATT-Deco:
+{<pDeco> <OBJ.*|ATT.*>+}
+{<pDeco> <(NOUN|ADJ|VERB).*>} <p.*|QT>
+
+ATT-Abl:
+{<pAbl> <(NOUN|ADJ|VERB).*> <QT> <pRnd>} (?!<.*>)
+
+ATT-Add:
+{<pAdd> <QT>? <OBJ.*> <ATT-(Adj|Gen|Abl|Pos|Part)>?} (?!<.*>)
+{<pAdd> <QT> <OBJ.*>} <QT>
+{<pAdd> <OBJ.*> <QT>} <pCoor>
+
+ATT-Stat:
+{<pStat> <NAME|AGT> <pRef> <pStat>}
+{<pStat> <NOUN.*|VERB.*|OBJ.*>+} (?!<.*>)
+{<NAME> <pStat>}
+{<pStat>}
+
+ATT-Pos:
+<pList|OBJ.*|ATT.*> {<AGT|LOC.*>} <OBJ.*|ATT.*>
+<pList|OBJ.*|ATT.*> {<AGT|LOC.*>} (?!<.*>)
+
+
+#########################
+# particles and phrases
+########################
+
+OP:
+<pList|pCont> <pCtx>? {<QT|OBJ.*|ATT.*|pCoor|pCtx>* <OBJ.*> <QT|OBJ.*|ATT.*|pCoor|pCtx>*} (?!<.*>)
+} <pCtx>? <pCoor> <pCtx>? {
+<ATT-Mag> <OBJ> <ATT-Add>}{<QT> <OBJ> # single case: dev line 161
+
+OP-Cont:
+<pList> <pCtx>? {<QT>? <ATT.*>* <OBJ.*> <QT>? <ATT.*>*} <pCont>
+
+OP:
+<pList> <pCtx>? <OP-Cont> {<QT|OBJ.*|ATT.*|pCoor|pCtx>* <OBJ.*> <QT|OBJ.*|ATT.*|pCoor|pCtx>*} (?!<.*>)
+} <pCtx>? <pCoor> <pCtx>? {
+
+RP:
+<pList|pCtx>? <pLoc> {<LOC-rm> <LOC.*>*} <pCtx>
+<pList|pCtx>? <pLoc> {<LOC-rm> <LOC.*>*} (?!<.*>)
+
+AP-Cu:
+<pList> <pCtx>? {<ATT-Mag> <pQual> <ATT-Mag>} (?!<.*>)
+<pList> <pCtx>? {<ATT-Mag> <ATT.*>+} (?!<.*>)
+<pList> <pCtx>? {<ATT-Mag> <pQual> <ATT-Mag>} <pCoor>
+
+AP-Rs:
+<pList> <pCtx>? {<QT>? <LOC-rs> <ATT.*>*} (?!<.*>)
+<pList> <pCtx>? {<QT>? <LOC-rs> <ATT.*>*} <pAdd|pCoor>
+
+AP-Oth:
+<pList> <pCtx>? {<ATT.*|LOC-rs|pLoc>+} (?!<.*>)
+
+AP-Loan:
+<pList> <pCtx>? {<AGT|NAME> <LOC.*>? <pLoc> <ATT-Mag> (<pCoor> <ATT-Mag>)? <ATT-Pos>? <ATT-Stat>}
+
+OP:
+<pList> <pCtx>? <AP.*> <pCoor|pAdd> <pCtx>? {<QT|OBJ.*|ATT.*|pCoor|pCtx|pAdd>* <OBJ.*> <QT|OBJ.*|ATT.*|pCoor|pCtx|pAdd>*} (?!<.*>)
+} <pCtx>? <pCoor> <pAdd>? <pCtx>? {
+{<QT> <OBJ.*> <ATT.*>*} (?!<.*>)
+
+
+# OP:
+# {<ALT> <ATT.*>*}
+# <.*Lemma=(item|et|atque|primus|primo).*> <x>? <.*Lemma=habeo.*>? {<ATT.*>* <QT.*>? <DET.* | ADP.*>? <x>? <ATT.*>* <OBJ.*>+ <ATT.*>* <QT.*>? <ATT.*>*}
+# {<QT.*> <DET.*>? <x>? <ATT.*>* <OBJ.*>+ <ATT.*>* (?!<.*>)}
+#
+# CTX:
+# {<.*Lemma=item.*>? <.*Lemma=(primo|primus|in|et|habeo|sequor).*>+ <(?!.*(OBJ|OP)).*>+} (?!<.*>)
+#
+# x:
+# <OP> {<.*Lemma=(et|atque).*>} <x>? <OP>
+# <OP> {<.*Lemma=(et|atque).*>} <x>? <OP>
+# <OP> {<.*Lemma=(et|atque).*>} <x>? <OP>
+# {<.*Lemma=(et|atque).*>? <.*Lemma=(primo|primus|item).*>} <x>? <OP>
