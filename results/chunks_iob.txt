@@ -1,0 +1,1989 @@
+Et, CCONJ O
+primo, ADV O
+fuerunt, AUX O
+inventa, VERB O
+in, ADP O
+coquina, NOUN O
+domus, NOUN O
+dicti, VERB O
+Guillelmi, NOUN O
+hec, ADJ O
+bona, NOUN O
+
+Una, NUM O
+scala, NOUN O
+
+Item, ADV O
+unum, NUM B-OBJECT
+scudellium, NOUN I-OBJECT
+
+Item, ADV O
+una, NUM O
+sartago, NOUN O
+
+Item, ADV O
+unum, NUM O
+verutum, VERB O
+
+Item, ADV O
+duos, NUM O
+banchos, NOUN O
+
+Item, ADV O
+unum, NUM B-OBJECT
+morterium, NOUN I-OBJECT
+lapideum, ADJ I-OBJECT
+
+Item, ADV O
+duos, NUM O
+trissonos, NOUN O
+
+Item, ADV O
+una, NUM B-OBJECT
+gaveda, NOUN I-OBJECT
+
+Item, ADV O
+duo, NUM B-OBJECT
+tripedes, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM B-OBJECT
+sella, NOUN I-OBJECT
+
+Item, ADV O
+x, NUM O
+duodenas, NUM O
+amannarum, VERB O
+
+Item, ADV O
+due, X O
+barile, ADJ O
+
+Item, ADV O
+i, NUM B-OBJECT
+tamis, ADJ I-OBJECT
+
+Item, ADV O
+i, NUM O
+flaciata, VERB O
+
+In, ADP O
+camera, NOUN O
+aule, NOUN O
+sequntur, VERB O
+bona, NOUN O
+
+Primo, ADV O
+unum, NUM B-OBJECT
+lectum, NOUN I-OBJECT
+tabularum, NOUN I-OBJECT
+
+Item, ADV O
+basachia, NOUN O
+
+Item, ADV O
+matalassium, ADJ O
+
+item, ADV O
+i, NUM B-OBJECT
+pulvinar, ADJ I-OBJECT
+
+Item, ADV O
+flaciata, VERB O
+1, NUM O
+
+Item, ADV O
+i, NUM O
+archa, NOUN O
+
+Item, ADV O
+ii, NUM O
+banchi, ADJ O
+
+Item, ADV O
+i, NUM O
+percita, VERB O
+
+Item, ADV O
+i, NUM O
+curassia, ADJ O
+cum, ADP O
+gorgeria, NOUN O
+de, ADP O
+plata, NOUN O
+
+In, ADP O
+aula, NOUN O
+sequntur, VERB O
+hec, ADJ O
+bona, NOUN O
+
+Primo, ADV O
+i, NUM O
+archa, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+capcia, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM O
+arquibancum, NOUN O
+
+Item, ADV O
+i, NUM O
+alia, DET O
+capcia, NOUN O
+
+Item, ADV O
+i, NUM O
+pauca, DET O
+capcia, NOUN O
+
+Item, ADV O
+i, NUM O
+alia, DET O
+capcia, NOUN O
+
+Item, ADV O
+i, NUM O
+banchum, ADJ O
+
+Item, ADV O
+una, NUM O
+mastra, NOUN O
+
+item, ADV O
+i, NUM B-OBJECT
+tabula, NOUN I-OBJECT
+comedendi, VERB I-OBJECT
+cum, ADP I-OBJECT
+tabulonis, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM O
+brochum, ADJ O
+sive, CCONJ O
+canterium, NOUN O
+
+Item, ADV O
+i, NUM O
+enbotador, VERB O
+
+Item, ADV O
+i, NUM O
+missaraba, ADJ O
+
+Item, ADV O
+i, NUM O
+compas, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+lancea, NOUN I-OBJECT
+
+Item, ADV O
+ii, NUM B-OBJECT
+capelli, NOUN I-OBJECT
+de, ADP I-OBJECT
+feutre, NOUN I-OBJECT
+
+Item, ADV O
+unum, NUM O
+mantellum, NOUN O
+sive, CCONJ O
+una, NUM O
+clamis, NOUN O
+de, ADP O
+viridi, NOUN O
+panno, NOUN O
+cum, ADP O
+penna, NOUN O
+scurolorum, NOUN O
+
+Item, ADV O
+i, NUM O
+alium, DET O
+mantellum, NOUN O
+sive, CCONJ O
+unam, NUM O
+clamidem, NOUN O
+de, ADP O
+vario, NOUN O
+cum, ADP O
+penna, NOUN O
+cuniclorum, NOUN O
+
+Item, ADV O
+i, NUM O
+gardacorcia, NOUN O
+muliebre, NOUN O
+de, ADP O
+vario, NOUN O
+cum, ADP O
+penna, NOUN O
+edulorum, NOUN O
+
+Item, ADV O
+unum, NUM O
+aliud, DET O
+gardacorcium, NOUN O
+et, CCONJ O
+tunica, NOUN O
+et, CCONJ O
+capucium, NOUN O
+de, ADP O
+livido, ADJ O
+panno, NOUN O
+dicti, VERB O
+Guillelmi, NOUN O
+cum, ADP O
+penna, NOUN O
+edulorum, NOUN O
+in, ADP O
+gardacorsio, NOUN O
+dicti, VERB O
+Guillelmi, NOUN O
+
+Item, ADV O
+i, NUM O
+tunica, NOUN O
+de, ADP O
+perieto, NOUN O
+rubeo, NOUN O
+muliebri, NOUN O
+dicte, VERB O
+eique, DET O
+uxoris, NOUN O
+cum, ADP O
+planqueta, ADJ O
+argenti, NOUN O
+
+Item, ADV O
+i, NUM O
+cohopertorium, ADJ O
+hendacium, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+tunica, NOUN I-OBJECT
+de, ADP I-OBJECT
+camelino, NOUN I-OBJECT
+veteri, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM O
+alia, DET O
+tunica, NOUN O
+de, ADP O
+livido, NOUN O
+panno, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+gardacorcium, NOUN I-OBJECT
+de, ADP I-OBJECT
+camelino, NOUN I-OBJECT
+cum, ADP I-OBJECT
+penna, NOUN I-OBJECT
+edulorum, NOUN I-OBJECT
+
+Item, ADV O
+decem, NUM O
+lintiamina, NOUN O
+hospicii, NOUN O
+dicti, VERB O
+Guillelmi, NOUN O
+
+Item, ADV O
+quatuor, NUM O
+mappe, NUM O
+
+Item, ADV O
+iiii, NUM O
+manutergia, NOUN O
+
+Item, ADV O
+ii, NUM O
+camisie, NOUN O
+
+Item, ADV O
+tria, NUM O
+candelabra, ADJ O
+
+Item, ADV O
+i, NUM O
+flaciata, VERB O
+
+Item, ADV O
+i, NUM O
+zona, NOUN O
+de, ADP O
+lana, NOUN O
+cum, ADP O
+bursa, NOUN O
+de, ADP O
+filo, NOUN O
+
+Item, ADV O
+i, NUM O
+cohopertorium, ADJ O
+fayssatum, VERB O
+
+Item, ADV O
+i, NUM B-OBJECT
+tabula, NOUN I-OBJECT
+portandi, VERB I-OBJECT
+panem, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM B-OBJECT
+gippa, NOUN I-OBJECT
+vetera, NOUN I-OBJECT
+
+Item, ADV O
+11, NUM O
+cabolli, NOUN O
+fili, VERB O
+cum, ADP O
+aliquibus, DET O
+stagnis, NOUN O
+fili, PRON O
+
+Item, ADV O
+19, NUM O
+parvi, NOUN O
+cabedelli, VERB O
+fili, PRON O
+
+Item, ADV O
+ii, NUM O
+enses, NOUN O
+
+Item, ADV O
+i, NUM O
+penatum, VERB O
+
+Item, ADV O
+ii, NUM O
+tauletos, ADJ O
+
+Item, ADV O
+i, NUM O
+servelleria, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+massa, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM B-OBJECT
+bocelletum, ADJ I-OBJECT
+
+Item, ADV O
+ii, NUM B-OBJECT
+cultelli, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM B-OBJECT
+brandonum, NOUN I-OBJECT
+pro, ADP I-OBJECT
+parte, NOUN I-OBJECT
+combustum, VERB I-OBJECT
+
+In, ADP O
+cellario, NOUN O
+dicti, VERB O
+domus, NOUN O
+hec, ADJ O
+bona, NOUN O
+sequntur, VERB O
+inventa, VERB O
+prout, SCONJ O
+infra, ADP O
+
+Primo, ADV O
+i, NUM O
+druell, NOUN O
+vinandi, VERB O
+
+Item, ADV O
+i, NUM B-OBJECT
+vas, NOUN I-OBJECT
+vacuum, ADJ I-OBJECT
+27, NUM I-OBJECT
+milhayrolarum, NOUN I-OBJECT
+
+Item, ADV O
+iiii, NUM O
+vegetes, NOUN O
+vacue, VERB O
+de, ADP O
+mena, NOUN O
+
+Item, ADV O
+iii, NUM O
+enbotadors, VERB O
+
+Item, ADV O
+i, NUM O
+descargadoyra, NOUN O
+
+Item, ADV O
+vi, NUM O
+tyne, NOUN O
+bugaderie, VERB O
+
+Item, ADV O
+v, NUM O
+tynne, NOUN O
+bagnadoyre, VERB O
+
+Item, ADV O
+iiii, NUM O
+trahedoyre, NOUN O
+
+Item, ADV O
+septem, NUM O
+pale, NOUN O
+furni, NOUN O
+
+Item, ADV O
+i, NUM O
+serra, NOUN O
+duorum, NUM O
+manum, NOUN O
+cum, ADP O
+lima, NOUN O
+sua, DET O
+
+Item, ADV O
+quatuor, NUM O
+serre, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+manayra, NOUN I-OBJECT
+
+Item, ADV O
+i, NUM B-OBJECT
+destral, ADJ I-OBJECT
+
+Item, ADV O
+ii, NUM O
+aysse, NOUN O
+
+Item, ADV O
+i, NUM O
+magnum, ADJ O
+verrubi, VERB O
+
+Item, ADV O
+ii, NUM O
+mals, NOUN O
+
+Item, ADV O
+i, NUM O
+magnum, ADJ O
+syment, VERB O
+
+Item, ADV O
+i, NUM O
+modicum, ADJ O
+syment, VERB O
+
+Item, ADV O
+iii, NUM O
+plane, ADV O
+
+Item, ADV O
+iiii, NUM O
+scalpri, NOUN O
+
+Item, ADV O
+i, NUM O
+magna, ADJ O
+verruna, NOUN O
+
+Item, ADV O
+iii, NUM O
+bancha, ADJ O
+
+Item, ADV O
+i, NUM B-OBJECT
+planonum, NOUN I-OBJECT
+de, ADP I-OBJECT
+gargallar, NOUN I-OBJECT
+
+Item, ADV O
+42, NUM O
+petie, VERB O
+fuste, NOUN O
+cranetorum, ADJ O
+de, ADP O
+sex, NUM O
+palmis, NOUN O
+usque, ADP O
+decem, NUM O
+palmos, NOUN O
+
+Item, ADV O
+12, NUM O
+petie, NOUN O
+pleche, VERB O
+de, ADP O
+tyna, NOUN O
+de, ADP O
+quercore, NOUN O
+
+Item, ADV O
+iii, NUM B-OBJECT
+circuli, NOUN I-OBJECT
+de, ADP I-OBJECT
+fausso, VERB I-OBJECT
+de, ADP I-OBJECT
+septem, NUM I-OBJECT
+gays, NOUN I-OBJECT
+
+Item, ADV O
+centum, NUM O
+tabule, NOUN O
+pyni, VERB O
+de, ADP O
+quinque, NUM O
+palmis, NOUN O
+usque, ADP O
+octo, NUM B-OBJECT
+palmis, NOUN I-OBJECT
+
+Item, ADV O
+vi, NUM B-OBJECT
+tabule, NOUN I-OBJECT
+de, ADP I-OBJECT
+melene, NOUN I-OBJECT
+
+Item, ADV O
+iiii, NUM B-OBJECT
+tors, NOUN I-OBJECT
+de, ADP I-OBJECT
+melene, NOUN I-OBJECT
+
+Item, ADV O
+due, NOUN O
+duodene, NOUN O
+dogarum, NOUN O
+de, ADP O
+quercore, NOUN O
+
+Item, ADV O
+i, NUM B-OBJECT
+calaman, NOUN I-OBJECT
+de, ADP I-OBJECT
+pyno, NOUN I-OBJECT
+
+Item, ADV O
+66, NUM B-OBJECT
+scaloni, NOUN I-OBJECT
+de, ADP I-OBJECT
+pyno, NOUN I-OBJECT
+
+Item, ADV O
+ii, NUM O
+tauloni, NOUN O
+
+Item, ADV O
+14, NUM O
+pale, NOUN O
+furni, NOUN O
+sine, ADP O
+caudis, NOUN O
+
+Item, ADV O
+v, NUM O
+duodene, NOUN O
+circulorum, NOUN O
+quinque, NUM O
+goarum, NOUN O
+
+In, ADP O
+cellario, NOUN O
+transversie, NOUN O
+Sancte, NOUN O
+Marie, NOUN O
+sunt, AUX O
+inventa, VERB O
+hec, ADJ O
+bona, NOUN O
+prout, SCONJ O
+ecce, PART O
+
+Primo, ADV O
+i, NUM O
+vas, NOUN O
+18, NUM O
+millarum, NOUN O
+vacuum, ADJ O
+
+Item, ADV O
+i, NUM O
+bota, ADJ O
+12, NUM O
+millarum, NOUN O
+vacua, ADJ O
+
+Item, ADV O
+i, NUM O
+bota, NOUN O
+septem, NUM O
+millarum, NOUN O
+vacua, ADJ O
+
+Item, ADV O
+vi, NUM O
+bote, NOUN O
+de, ADP O
+mena, NOUN O
+vacua, ADJ O
+
+Item, ADV O
+i, NUM B-OBJECT
+vas, NOUN I-OBJECT
+vinandi, VERB I-OBJECT
+
+Item, ADV O
+viii, NUM O
+descargadoyre, ADV O
+
+Item, ADV O
+iiii, NUM O
+torculeria, NOUN O
+calcandi, VERB O
+racemos, NOUN O
+
+Item, ADV O
+iii, NUM O
+duodene, NOUN O
+circulorum, NOUN O
+de, ADP O
+sauze, NOUN O
+trium, NUM O
+goarum, NOUN O
+
+Primo, ADV O
+habuit, VERB O
+in, ADP O
+dote, NOUN O
+dicta, VERB O
+domina, NOUN O
+Sanxia, NOUN O
+duas, NUM O
+setzenas, ADJ O
+cum, SCONJ O
+dimidia, ADJ O
+in, ADP O
+molendino, VERB O
+vulgariter, ADV O
+appellato, VERB O
+dels, X O
+Vivautz, VERB O
+
+Item, ADV O
+300, NUM O
+librarum, NOUN O
+massilientium, VERB O
+minutorum, NOUN O
+quas, PRON O
+de, ADP O
+moneta, NOUN O
+nunc, ADV O
+currenta, VERB O
+in, ADP O
+Massilie, ADJ O
+valent, VERB O
+et, CCONJ O
+assendunt, VERB O
+600, NUM O
+librarum, NOUN O
+et, CCONJ O
+ultra, ADP O
+vestes, NOUN O
+et, CCONJ O
+jochalia, ADJ O
+sua, DET O
+
+Sequntur, VERB O
+bona, NOUN O
+parafernalia, ADJ O
+
+Primo, ADV O
+quoddam, DET O
+hospicium, NOUN O
+payroalem, ADJ O
+quod, PRON O
+fuit, AUX O
+domini, NOUN O
+Raimondi, NOUN O
+Raolini, NOUN O
+condam, VERB O
+avi, NOUN O
+materni, ADJ O
+ipsorum, DET O
+fratrum, NOUN O
+cum, ADP O
+froyre, NOUN O
+et, CCONJ O
+omnia, DET O
+bona, NOUN O
+mobilia, ADJ O
+que, CCONJ O
+fuerunt, AUX O
+predicti, VERB O
+domini, NOUN O
+Raymundi, NOUN O
+Raolini, NOUN O
+
+Item, ADV O
+alias, DET O
+duas, NUM O
+setzenas, ADJ O
+et, CCONJ O
+media, ADJ O
+in, ADP O
+dicto, VERB O
+molendino, VERB O
+dels, X O
+Vivautz, VERB O
+
+Item, ADV O
+unum, NUM O
+hospicium, NOUN O
+scitum, VERB O
+in, ADP O
+Piscaria, ADJ O
+Massilie, NOUN O
+quod, PRON O
+locatur, VERB O
+omni, DET O
+anno, NOUN O
+x, NUM O
+librarum, NOUN O
+
+Item, ADV O
+unum, NUM O
+operatorium, ADJ O
+scitum, VERB O
+in, ADP O
+Draparia, ADJ O
+Inferiori, ADJ O
+quod, PRON O
+locatur, VERB O
+omni, DET O
+anno, NOUN O
+sex, NUM O
+librarum, NOUN O
+
+Item, ADV O
+59, NUM O
+solidi, NOUN O
+censuales, ADJ O
+quos, PRON O
+serviunt, VERB O
+quinque, NUM O
+facherii, NOUN O
+pro, ADP O
+diverssis, ADJ O
+possessionibus, NOUN O
+
+Item, ADV O
+unum, NUM O
+claus, NOUN O
+vinee, VERB O
+scitum, VERB O
+
+Sequuntur, VERB O
+jocalia, ADJ O
+
+Et, CCONJ O
+primo, ADV O
+unum, NUM O
+mantellum, NOUN O
+et, CCONJ O
+supertunicale, ADJ O
+garnita, VERB O
+seu, CCONJ O
+freada, NOUN O
+cum, ADP O
+firmaturis, NOUN O
+et, CCONJ O
+gautes, NOUN O
+argento, NOUN O
+et, CCONJ O
+margaritis, NOUN O
+foirata, VERB O
+de, ADP O
+variis, ADJ O
+et, CCONJ O
+quandam, DET O
+tunicam, NOUN O
+freada, ADJ O
+argento, NOUN O
+et, CCONJ O
+margaritis, ADJ O
+eodem, DET O
+modo, NOUN O
+ut, ADV O
+supertunicale, ADJ O
+predictum, VERB O
+
+Item, ADV O
+quandam, DET O
+vestem, NOUN O
+scilicet, CCONJ O
+mantellum, NOUN O
+et, CCONJ O
+supertunicale, ADJ O
+de, ADP O
+rubeo, NOUN O
+foirata, VERB O
+de, ADP O
+sendato, VERB O
+quod, SCONJ O
+supertunicale, ADJ O
+munitum, VERB O
+erat, AUX O
+de, ADP O
+botonibus, NOUN O
+de, ADP O
+anbro, NOUN O
+et, CCONJ O
+de, ADP O
+argento, NOUN O
+
+Item, ADV O
+quandam, DET O
+vestem, NOUN O
+scilicet, CCONJ O
+mantellum, NOUN O
+et, CCONJ O
+supertunicale, ADJ O
+de, ADP O
+scarlleto, ADJ O
+cum, ADP O
+foiratura, NOUN O
+de, ADP O
+variis, ADJ O
+in, ADP O
+quo, PRON O
+supertunicale, ADJ O
+erant, AUX O
+botonibus, NOUN O
+et, CCONJ O
+firmaturis, NOUN O
+et, CCONJ O
+gaute, NOUN O
+de, ADP O
+auro, NOUN O
+
+Item, ADV O
+quoddam, DET O
+supertunicale, ADJ O
+rubeo, NOUN O
+munitum, VERB O
+eo, PRON O
+modo, NOUN O
+quo, PRON O
+aliud, DET O
+supertunicale, ADJ O
+predictum, VERB O
+
+Item, ADV O
+quoddam, DET O
+aliud, DET O
+supertunicale, ADJ O
+de, ADP O
+samit, NOUN O
+viridi, NOUN O
+cum, ADP O
+botonibus, NOUN O
+12, NUM O
+danbro, VERB O
+et, CCONJ O
+firmaturis, NOUN O
+et, CCONJ O
+gautea, ADJ O
+de, ADP O
+argento, NOUN O
+et, CCONJ O
+margaritis, NOUN O
+
+Item, ADV O
+quoddam, DET O
+supertunicale, ADJ O
+de, ADP O
+violeto, ADJ O
+foiratum, VERB O
+de, ADP O
+escurolo, NOUN O
+
+Item, ADV O
+quoddam, DET O
+supertunicale, ADJ O
+de, ADP O
+media, ADJ O
+lana, NOUN O
+foiratum, VERB O
+de, ADP O
+sendato, VERB O
+rubeo, NOUN O
+munitum, VERB O
+argento, NOUN O
+et, CCONJ O
+margaritis, NOUN O
+modo, NOUN O
+quo, PRON O
+supra, ADV O
+
+Item, ADV O
+quoddam, DET O
+supertunicale, ADJ O
+de, ADP O
+mesclat, VERB O
+foiratum, VERB O
+de, ADP O
+agnis, NOUN O
+cum, ADP O
+vi, NUM O
+butonibus, NOUN O
+aureis, NOUN O
+et, CCONJ O
+gautee, ADV O
+de, ADP O
+margaritis, NOUN O
+et, CCONJ O
+firmaturis, NOUN O
+argenteis, ADJ O
+
+Item, ADV O
+quoddam, DET O
+mantellum, NOUN O
+de, ADP O
+livido, NOUN O
+foiratum, VERB O
+de, ADP O
+variis, ADJ O
+
+Item, ADV O
+aliud, DET O
+mantellum, NOUN O
+de, ADP O
+vair, NOUN O
+foiratum, VERB O
+de, ADP O
+cuniculis, NOUN O
+
+Item, ADV O
+quandam, DET O
+tunicam, NOUN O
+de, ADP O
+violeto, ADJ O
+an, SCONJ O
+causana, ADJ O
+argentea, NOUN O
+et, CCONJ O
+de, ADP O
+margaritis, NOUN O
+
+Item, ADV O
+unam, NUM O
+capam, NOUN O
+de, ADP O
+livido, NOUN O
+foiratam, VERB O
+de, ADP O
+sendato, VERB O
+rubeo, NOUN O
+
+Item, ADV O
+lo, VERB O
+frez, NOUN O
+unius, NUM O
+mantelli, NOUN O
+de, ADP O
+camelot, NOUN O
+quod, PRON O
+erat, AUX O
+de, ADP O
+margaritis, NOUN O
+
+Item, ADV O
+petimus, VERB O
+ut, SCONJ O
+supra, ADV O
+primo, ADV O
+vii, NUM B-OBJECT
+ciphos, NOUN I-OBJECT
+argenteos, NOUN I-OBJECT
+
+Item, ADV O
+x, NUM O
+duodenas, NUM O
+quocleariorum, ADJ O
+argenteorum, NOUN O
+
+Item, ADV O
+quendam, DET O
+saphirum, NOUN O
+cum, ADP O
+virga, NOUN O
+aurea, NOUN O
+
+Item, ADV O
+unum, NUM B-OBJECT
+smaragdum, NOUN I-OBJECT
+cum, ADP I-OBJECT
+virga, NOUN I-OBJECT
+aurea, NOUN I-OBJECT
+
+Item, ADV O
+quoddam, VERB O
+lignum, NOUN O
+sistentem, VERB O
+infra, ADP O
+portum, NOUN O
+Massilie, ADJ O
+vocatum, VERB O
+Sanctum, ADJ O
+Anthonium, NOUN O
+cum, ADP O
+arboribus, NOUN O
+duobus, NUM O
+duabus, NUM O
+antenis, NOUN O
+et, CCONJ O
+duobus, NUM O
+timonis, NOUN O
+et, CCONJ O
+cum, ADP O
+quinque, NUM O
+ferris, NOUN O
+et, CCONJ O
+duobus, NUM B-OBJECT
+restis, NOUN I-OBJECT
+
+Item, ADV O
+unam, NUM O
+botam, ADJ O
+
+Item, ADV O
+unum, NUM O
+carratellum, VERB O
+
+Item, ADV O
+duas, NUM O
+balistas, NOUN O
+
+Item, ADV O
+duo, NUM O
+calegni, NOUN O
+
+Item, ADV O
+quodam, DET O
+cassia, PROPN O
+fuste, NOUN O
+cum, ADP O
+brachie, NOUN O
+et, CCONJ O
+ponderibus, NOUN O
+lapideis, ADJ O
+ad, ADP O
+ponderandum, VERB O
+farinam, NOUN O
+
+Item, ADV O
+unum, NUM O
+scrineum, ADJ O
+barucellandi, VERB O
+farinam, NOUN O
+
+Item, ADV O
+unum, NUM O
+armarium, ADJ O
+
+Itum, NOUN O
+una, NUM O
+tabuleta, ADJ O
+comedendi, VERB O
+cum, ADP O
+tabulonis, NOUN O
+
+Item, ADV O
+mantellum, NOUN O
+unum, NUM B-OBJECT
+rubeum, ADJ I-OBJECT
+
+Item, ADV O
+gardacossium, ADJ O
+franseum, VERB O
+mulierem, NOUN O
+panni, NOUN O
+de, ADP O
+rubeo, NOUN O
+positum, VERB O
+in, ADP O
+pignore, NOUN O
+pro, ADP O
+uno, NUM O
+floreno, NOUN O
+pro, ADP O
+exequiis, NOUN O
+expendito, VERB O
+
+Item, ADV O
+unum, NUM O
+canestellum, ADJ O
+
+Primo, ADV O
+viii, NUM O
+cartariate, ADV O
+vinee, VERB O
+et, CCONJ O
+terre, VERB O
+apud, ADP O
+Fontem, DET O
+Scurum, NOUN O
+confrontate, VERB O
+cum, ADP O
+vinea, NOUN O
+Petri, NOUN O
+Aycardi, NOUN O
+et, CCONJ O
+accapitis, NOUN O
+Martinentorum, ADJ O
+
+Item, ADV O
+primo, ADV O
+dixit, VERB O
+dicta, VERB O
+tutrix, NOUN O
+se, PRON O
+de, ADP O
+dictis, VERB O
+bonis, NOUN O
+invenisse, VERB O
+videlicet, VERB O
+quoddam, DET O
+ospicium, NOUN O
+situm, NOUN O
+in, ADP O
+carreria, NOUN O
+Sancti, ADJ O
+Salvatoris, NOUN O
+iuxta, ADP O
+ospicium, NOUN O
+domum, NOUN O
+Guillelmi, PROPN O
+Albi, ADJ O
+et, CCONJ O
+iuxta, ADP O
+cantonum, NOUN O
+et, CCONJ O
+iuxta, ADP O
+viridarium, NOUN O
+subditum, VERB O
+domino, NOUN O
+dominarum, NOUN O
+monialium, ADJ O
+Sancti, ADJ O
+Salvatoris, NOUN O
+seu, CCONJ O
+aliorum, DET O
+dominorum, NOUN O
+ad, ADP O
+quos, PRON O
+spectabit, VERB O
+ad, ADP O
+certum, ADJ O
+censum, NOUN O
+
+Item, ADV O
+in, ADP O
+porticu, NOUN O
+dicti, VERB O
+ospici, VERB O
+
+Unam, NUM O
+bredolam, ADJ O
+
+Item, ADV O
+unam, NUM O
+botam, ADJ O
+vinaygrina, ADJ O
+
+Item, ADV O
+unam, NUM O
+cacxiam, NOUN O
+de, ADP O
+sappo, NOUN O
+cum, ADP O
+scripturis, NOUN O
+operatorii, ADJ O
+et, CCONJ O
+una, NUM O
+bassina, NOUN O
+parva, ADJ O
+ad, ADP O
+tenendum, VERB O
+pecuniam, NOUN O
+ac, CCONJ O
+una, NUM O
+cayseta, ADJ O
+corredissa, VERB O
+
+Item, ADV O
+unum, NUM O
+scannum, NOUN O
+de, ADP O
+duobus, NUM O
+meianis, ADJ O
+in, ADP O
+quorum, PRON O
+uno, NUM O
+meiano, ADJ O
+est, AUX O
+circa, ADP O
+unam, NUM O
+quarteriam, NOUN O
+fabarum, NOUN O
+cum, ADP O
+uno, NUM O
+coffino, NOUN O
+uno, NUM O
+verubo, NOUN O
+et, CCONJ O
+una, NUM O
+mappa, NOUN O
+mastre, ADV O
+
+Et, CCONJ O
+in, ADP O
+alio, DET O
+meiano, ADJ O
+sacqum, NOUN O
+unum, NUM O
+et, CCONJ O
+potum, NOUN O
+unum, NUM O
+terre, VERB O
+ad, ADP O
+tenendum, VERB O
+mel, NOUN O
+et, CCONJ O
+amforam, NOUN O
+et, CCONJ O
+jarretam, ADJ O
+ad, ADP O
+tenendum, VERB O
+oleum, NOUN O
+
+Item, ADV O
+aliud, DET O
+scannum, NOUN O
+cum, ADP O
+duobus, NUM O
+meianis, ADJ O
+in, ADP O
+quorum, PRON O
+uno, NUM O
+meiano, ADJ O
+sunt, AUX O
+scutelle, ADV O
+et, CCONJ O
+cissoria, ADJ O
+de, ADP O
+boieza, NOUN O
+50, NUM O
+vel, CCONJ O
+circa, ADP O
+
+Et, CCONJ O
+primo, ADV O
+quoddam, DET O
+legendarium, ADJ O
+quod, PRON O
+incipit, VERB O
+in, ADP O
+sui, DET O
+principio, NOUN O
+visio, NOUN O
+ysayee, VERB O
+et, CCONJ O
+finit, VERB O
+in, ADP O
+eodem, DET O
+In, ADP O
+natale, ADJ O
+sancte, ADV O
+agathe, NOUN O
+
+Item, ADV O
+unum, NUM O
+legendarium, ADJ O
+et, CCONJ O
+responserium, ADJ O
+in, ADP O
+uno, NUM O
+et, CCONJ O
+eodem, DET O
+volumine, NOUN O
+quod, SCONJ O
+incipit, VERB O
+Benedictus, VERB O
+Deus, NOUN O
+et, CCONJ O
+Patri, NOUN O
+domini, NOUN O
+nostri, DET O
+Jhesu, VERB O
+Christi, ADJ O
+et, CCONJ O
+fini, NOUN O
+manifestavit, VERB O
+se, PRON O
+Jhesus, NOUN O
+etc, X O
+postibus, NOUN O
+computum, ADJ O
+
+Item, ADV O
+unum, NUM O
+responsorium, ADJ O
+et, CCONJ O
+legenderium, VERB O
+quod, SCONJ O
+incipuit, VERB O
+post, ADP O
+istas, DET O
+infernalium, ADJ O
+et, CCONJ O
+mortalium, ADJ O
+voces, NOUN O
+et, CCONJ O
+fini, NOUN O
+in, ADP O
+illo, DET O
+tempore, NOUN O
+eggressus, VERB O
+Jhesus, NOUN O
+perambulabat, VERB O
+in, ADP O
+Gerico, NOUN O
+
+Item, ADV O
+textum, NOUN O
+evangelii, NOUN O
+et, CCONJ O
+apostolurum, NOUN O
+quod, PRON O
+incipit, VERB O
+hec, DET O
+dixit, VERB O
+dominus, NOUN O
+propter, ADP O
+Sion, PROPN O
+non, PART O
+tace, VERB O
+bunt, VERB O
+et, CCONJ O
+finit, VERB O
+in, ADP O
+illo, DET O
+tempore, NOUN O
+dixit, VERB O
+dictus, VERB O
+discipulis, NOUN O
+suis, DET O
+nemo, PRON O
+potest, VERB O
+venire, VERB O
+ad, ADP O
+me, PRON O
+etc, X O
+
+Item, ADV O
+quoddam, DET O
+psalterium, NOUN O
+quod, PRON O
+incipit, VERB O
+beatus, ADJ O
+vir, NOUN O
+cum, ADP O
+kalendario, NOUN O
+ante, ADP O
+cum, ADP O
+iis, PRON O
+notatis, NOUN O
+et, CCONJ O
+post, ADP O
+colletarium, ADJ O
+quod, SCONJ O
+incipt, NOUN O
+dixit, VERB O
+in, ADP O
+novissimiis, ADJ O
+et, CCONJ O
+finit, VERB O
+six, NOUN O
+ministrat, VERB O
+
+Item, ADV O
+unum, NUM O
+synodale, ADJ O
+quod, PRON O
+incipit, VERB O
+quoma, VERB O
+et, CCONJ O
+finit, VERB O
+penitus, ADV O
+liberavit, VERB O
+cum, ADP O
+aliquibus, DET O
+capitulis, ADJ O
+et, CCONJ O
+post, ADP O
+officium, NOUN O
+eucaristie, NOUN O
+quod, SCONJ O
+finit, VERB O
+quotienscumque, ADJ O
+
+Item, ADV O
+unum, NUM O
+colletanum, ADJ O
+quod, PRON O
+incipit, VERB O
+dilectissimii, ADV O
+tum, CCONJ O
+kalendario, NOUN O
+ante, ADP O
+et, CCONJ O
+fini, NOUN O
+tibi, PRON O
+filii, NOUN O
+tui, DET O
+
+Primo, ADV O
+Petro, PROPN O
+Folcardi, VERB O
+macellario, ADV O
+in, ADP O
+quatuor, NUM O
+florenos, NOUN O
+auri, NOUN O
+ipsi, DET O
+Johanni, NOUN O
+Casse, VERB O
+mutuatos, VERB O
+
+Item, ADV O
+domine, NOUN O
+Beatrici, NOUN O
+Beroarde, ADV O
+moniali, ADJ O
+santi, NOUN O
+Salvatoris, NOUN O
+in, ADP O
+decem, NUM O
+scutis, NOUN O
+auri, NOUN O
+mutuatis, VERB O
+
+Item, ADV O
+domine, NOUN O
+Rixande, VERB O
+Martine, VERB O
+moniali, ADJ O
+sancti, ADJ O
+Poncii, NOUN O
+in, ADP O
+quatuor, NUM O
+florinis, NOUN O
+auri, NOUN O
+mutuatis, VERB O
+
+Item, ADV O
+domine, NOUN O
+Katherine, ADV O
+Martine, VERB O
+moniali, ADJ O
+sancti, ADJ O
+Poncii, NOUN O
+in, ADP O
+quatuor, NUM O
+florinos, NOUN O
+auri, NOUN O
+mutuatis, VERB O
+supra, ADP O
+uno, NUM O
+pomo, NOUN O
+ensis, NOUN O
+cristalli, ADJ O
+una, NUM O
+parva, ADJ O
+zona, NOUN O
+argenti, NOUN O
+et, CCONJ O
+duabus, NUM O
+virgis, NOUN O
+argenti, NOUN O
+
+Item, ADV O
+tenetur, VERB O
+Margarite, ADV O
+de, ADP O
+Favassio, NOUN O
+in, ADP O
+quatuor, NUM O
+florenos, NOUN O
+auri, NOUN O
+mutuatis, VERB O
+supra, ADP O
+uno, NUM O
+annulo, NOUN O
+auri, NOUN O
+cum, ADP O
+uno, NUM O
+esmeralde, NOUN O
+et, CCONJ O
+quatuor, NUM B-OBJECT
+perlis, NOUN I-OBJECT
+grossis, ADJ I-OBJECT
+
+Item, ADV O
+domine, NOUN O
+Marie, NOUN O
+Ricavi, NOUN O
+moniali, ADJ O
+sancti, ADJ O
+Salvatoris, NOUN O
+in, ADP O
+duobus, NUM O
+florenis, NOUN O
+auri, NOUN O
+mutuatis, VERB O
+supra, ADP O
+uno, NUM O
+annulo, NOUN O
+auri, NOUN O
+cum, ADP O
+saffiro, NOUN O
+
+Item, ADV O
+Guilhelmo, NOUN O
+Giraudi, VERB O
+in, ADP O
+florenis, NOUN O
+sexdecim, NUM O
+mutuatis, VERB O
+supra, ADP O
+duobus, NUM O
+annulis, NOUN O
+auri, NOUN O
+cum, ADP O
+lapidibus, NOUN O
+safili, ADJ O
+uno, NUM O
+et, CCONJ O
+alio, DET O
+balaysio, NOUN O
+
+Item, ADV O
+Anthonio, NOUN O
+de, ADP O
+Sarda, NOUN O
+in, ADP O
+florenis, NOUN O
+duodecim, NUM O
+mutuatis, VERB O
+supra, ADP O
+tribus, NUM O
+cordulis, NOUN O
+perlarum, NOUN O
+grossis, ADJ O
+decem, NUM O
+et, CCONJ O
+octo, NUM O
+operibus, NOUN O
+cappelli, NOUN O
+perlarum, NOUN O
+et, CCONJ O
+uno, NUM B-OBJECT
+annulo, NOUN I-OBJECT
+cum, ADP I-OBJECT
+lapide, NOUN I-OBJECT
+diamanti, VERB I-OBJECT
+
+Item, ADV O
+Bernardo, NOUN O
+Martini, NOUN O
+in, ADP O
+florenis, NOUN O
+triginta, NUM O
+de, ADP O
+quibus, PRON O
+habet, VERB O
+cordulos, NOUN O
+perlarum, NOUN O
+undecim, NUM O
+grossos, ADJ O
+et, CCONJ O
+perlarum, NOUN O
+grossarum, NOUN O
+
+Item, ADV O
+Rosse, PROPN O
+judee, VERB O
+in, ADP O
+florenis, NOUN O
+octo, NUM O
+et, CCONJ O
+grossis, ADJ O
+sex, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unam, NUM B-OBJECT
+zonam, NOUN I-OBJECT
+argenti, NOUN I-OBJECT
+
+Item, ADV O
+per, ADP O
+manus, NOUN O
+Mosseni, NOUN O
+de, ADP O
+Cadaneto, ADJ O
+qui, PRON O
+posuit, VERB O
+in, ADP O
+pignore, NOUN O
+unam, NUM O
+magnam, ADJ O
+zonam, NOUN O
+argenti, NOUN O
+pro, ADP O
+viginti, NUM O
+quatuor, NUM O
+florenis, NOUN O
+auri, NOUN O
+
+Item, ADV O
+Petro, PROPN O
+de, ADP O
+Sancto, ADJ O
+Jacobo, NOUN O
+in, ADP O
+florenos, NOUN O
+auri, NOUN O
+quinque, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unum, NUM O
+annulum, NOUN O
+auri, NOUN O
+cum, ADP O
+perlis, NOUN O
+circumcirca, VERB O
+
+Item, ADV O
+Mossenus, ADJ O
+de, ADP O
+Cadaneto, ADJ O
+impignoravit, VERB O
+unum, NUM O
+bassinetum, ADJ O
+unam, NUM O
+cottam, NOUN O
+malhe, ADP O
+unum, NUM O
+cavaghonum, NOUN O
+malhe, VERB O
+pro, ADP O
+florenis, NOUN O
+sex, NUM O
+
+Item, ADV O
+Johanni, PROPN O
+de, ADP O
+Montiliis, ADJ O
+in, ADP O
+florenis, NOUN O
+duodecim, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unam, NUM O
+magnam, ADJ O
+vanoam, NOUN O
+
+Item, ADV O
+domine, NOUN O
+Gantelme, ADV O
+Atulphe, VERB O
+in, ADP O
+florenis, NOUN O
+decem, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+pannum, NOUN O
+meianum, VERB O
+de, ADP O
+Francia, NOUN O
+et, CCONJ O
+unam, NUM O
+sayam, NOUN O
+de, ADP O
+Francia, NOUN O
+armeratam, VERB O
+armis, NOUN O
+ipsius, DET O
+
+Item, ADV O
+domine, NOUN O
+Beatrici, NOUN O
+de, ADP O
+Vaqueriis, NOUN O
+in, ADP O
+florenis, NOUN O
+quinque, NUM O
+
+Item, ADV O
+Astrugetus, VERB O
+de, ADP O
+Bederida, NOUN O
+impignoravit, VERB O
+unam, NUM O
+chopam, NOUN O
+de, ADP O
+chameloto, NOUN O
+rubeo, NOUN O
+cum, ADP O
+penna, NOUN O
+scurolorum, NOUN O
+unam, NUM O
+zonam, NOUN O
+argenti, NOUN O
+et, CCONJ O
+aliquos, DET B-OBJECT
+thoretos, VERB I-OBJECT
+perlarum, NOUN I-OBJECT
+pro, ADP I-OBJECT
+viginti, NUM I-OBJECT
+florenis, NOUN I-OBJECT
+
+Item, ADV O
+idem, DET O
+Astarguetus, ADJ O
+posuit, VERB O
+in, ADP O
+pignore, NOUN O
+aliquos, DET O
+tranchados, NOUN O
+et, CCONJ O
+octo, NUM O
+branchas, NOUN O
+coralhi, VERB O
+munitas, NOUN O
+argenti, NOUN O
+uno, NUM O
+calice, NOUN O
+cum, ADP O
+patena, NOUN O
+argenti, NOUN O
+pro, ADP O
+sexdecim, NUM O
+florenis, NOUN O
+
+Item, ADV O
+domino, NOUN O
+Stephano, PROPN O
+Jordani, NOUN O
+in, ADP O
+florenis, NOUN O
+decem, NUM O
+et, CCONJ O
+octo, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unam, NUM O
+tasseam, NOUN O
+magnam, ADJ O
+argenti, NOUN O
+et, CCONJ O
+duos, NUM O
+annulos, NOUN O
+auri, NOUN O
+causa, NOUN O
+mutui, ADJ O
+
+Item, ADV O
+Ludovico, NOUN O
+Olivarii, NOUN O
+in, ADP O
+florenis, NOUN O
+duobus, NUM O
+
+Item, ADV O
+Martino, PROPN O
+elie, NUM O
+in, ADP O
+florenis, NOUN O
+quatuor, NUM O
+causa, NOUN O
+emptionis, NOUN O
+civate, VERB O
+
+Item, ADV O
+Antonio, PROPN O
+Nicolai, PROPN O
+pro, ADP O
+vestibus, NOUN O
+nigris, ADJ O
+et, CCONJ O
+aliis, DET O
+raubis, NOUN O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unum, NUM O
+copertorium, ADJ O
+de, ADP O
+sirico, NOUN O
+unam, NUM O
+coutram, NOUN O
+et, CCONJ O
+tres, NUM O
+magnos, ADJ O
+cordulas, NOUN O
+perlarum, ADJ O
+et, CCONJ O
+unam, NUM B-OBJECT
+vanoam, NOUN I-OBJECT
+
+Item, ADV O
+Bartholomeo, NOUN O
+de, ADP O
+Montiliis, ADJ O
+in, ADP O
+florenis, NOUN O
+viginti, NUM O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+magnum, ADJ O
+pannum, NOUN O
+sive, CCONJ O
+drap, NOUN O
+Francie, NOUN O
+
+Item, ADV O
+Laurentio, VERB O
+de, ADP O
+Sancto, ADJ O
+Jacobo, NOUN O
+duos, NUM O
+florenis, NOUN O
+auri, NOUN O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+aliquos, DET O
+grossos, ADJ O
+patre, NOUN O
+nostre, DET O
+d۪ambre, X O
+
+Item, ADV O
+Philippo, PROPN O
+Colrati, VERB O
+pro, ADP O
+cera, NOUN O
+exaequiarum, NOUN O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+unum, NUM B-OBJECT
+pannum, NOUN I-OBJECT
+Francie, NOUN I-OBJECT
+
+Item, ADV O
+Antonete, ADV O
+Martine, VERB O
+florenos, NOUN O
+decem, NUM O
+auri, NOUN O
+
+Item, ADV O
+cuidam, ADJ O
+Cathalano, ADJ O
+quinque, NUM O
+florenos, NOUN O
+auri, NOUN O
+habet, VERB O
+in, ADP O
+pignore, NOUN O
+sex, NUM O
+brochas, NOUN O
+argenti, NOUN O
+
+Item, ADV O
+dicte, VERB O
+Anthonete, VERB O
+Martine, VERB O
+in, ADP O
+uno, NUM O
+scuto, NOUN O
+pro, ADP O
+velo, NOUN O
+sive, SCONJ O
+olet, VERB O
+dicte, VERB O
+domine, VERB O
+Raynaude, VERB O
+
+Sequuntur, VERB O
+bona, NOUN O
+mobilia, ADJ O
+reperta, VERB O
+in, ADP O
+supradicta, VERB O
+bastida, NOUN O
+
+Primo, ADV O
+in, ADP O
+Cappella, NOUN O
+ejusdem, DET O
+bastide, VERB O
+
+unum, NUM O
+oratorium, ADJ O
+depictum, VERB O
+cum, ADP O
+diversis, ADJ O
+ymaginibus, NOUN O
+magnum, ADJ O
+
+Item, ADV O
+unam, NUM B-OBJECT
+tabulam, NOUN I-OBJECT
+cum, ADP I-OBJECT
+aliquibus, DET I-OBJECT
+orationibus, NOUN I-OBJECT
+descriptam, VERB I-OBJECT
+
+In, ADP O
+socolo, NOUN O
+dicte, NOUN O
+domus, NOUN O
+
