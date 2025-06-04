@@ -4,7 +4,7 @@
 
 The code in this repository is designed to extract structured information (entities and their relationships) from Medieval Latin texts, leveraging both linguistic rules (via chunking) and machine learning. It is particularly tailored for historical or philological research, where both precision (via rules) and adaptability (via ML) are valuable. The two main Jupyter notebooks, `chunk_text.ipynb` and `train_model.ipynb`, form the core of the workflow.
 
-## 1. Rule-Based Chunking and Preprocessing
+## Rule-Based Chunking and Preprocessing
 
 Implemented in `chunk_text.ipynb` this step preprocesses the raw Latin text, applying rule-based chunking, and generating HTML-based visualizations to verify the results.
 
@@ -19,7 +19,7 @@ Custom visualization functions convert the chunked sentences into HTML, mapping 
 <img src="data/viz-example.svg">
 
 
-## 2. Machine Learning-Based Chunking
+## Machine Learning-Based Chunking
 In `train_model.ipynb`, we take the output of the rule-based chunker and train a machine learning model to perform chunking/entity extraction.
 
 The shallow chunked trees produced by `chunk_text.ipynb` are converted into IOB ([Inside-Outside-Beginning](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging))) format. The results are saved to `results/chunks_iob.txt`.
@@ -48,7 +48,7 @@ xychart-beta
 
 
 
-## 3. Supporting Files and Directories
+## Supporting Files and Directories
 
 - `data`: Contains dictionaries and lists (glosses, nouns, proper nouns, measurement units) used for tagging and feature extraction.
 - `rules`: Contains the rule-based chunking grammars.
