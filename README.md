@@ -1,6 +1,7 @@
 # A rules-based approach to entity extraction from Latin texts
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org)
 
 The code in this repository is designed to extract structured information (entities and their relationships) from Medieval Latin texts, leveraging both linguistic rules (via chunking) and machine learning. It is particularly tailored for historical or philological research, where both precision (via rules) and adaptability (via ML) are valuable. The two main Jupyter notebooks, `chunk_text.ipynb` and `train_model.ipynb`, form the core of the workflow.
 
@@ -47,7 +48,6 @@ xychart-beta
 **Key:** Accuracy (red), Precision (blue), Recall (yellow), F1 (green).
 
 
-
 ## Supporting Files and Directories
 
 - `data`: Contains dictionaries and lists (glosses, nouns, proper nouns, measurement units) used for tagging and feature extraction.
@@ -57,7 +57,8 @@ xychart-beta
 - `models`: Stores the trained machine learning chunker.
 
 ## License
-The project is licensed under the MIT License (LICENSE), allowing free use, modification, and distribution. See the LICENSE file in the top distribution directory for the full license text.
+
+The project is licensed under the [MIT License](LICENSE), allowing free use, modification, and distribution.
 
 
 
